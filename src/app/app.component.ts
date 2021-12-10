@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import data from "./superheroes/dataHeroes"
+import datos from "./super/datos"
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bases';
+
+  @Input() dataHeroes:Array<any> = data
+
+datosHeroes:Array<any> = datos
+
 }

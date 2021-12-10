@@ -1,0 +1,17 @@
+<p>listado works!</p>
+
+<div *ngFor="let x of ciudades; let i = index">{{i + 1}} {{x}}</div>
+
+<button (click)="eliminar('Cúcuta')">Eliminar un elemento</button>
+
+<form #datosFormulario = "ngForm" (ngSubmit)="enviarForm(datosFormulario.value.valor)">
+
+    <input type="number" name="valor" ngModel>
+    
+    <button type="submit">Eliminar ciudad</button>
+
+</form>
+
+<p *ngIf="cBorradas.length > 0">Ciudades borradas</p>
+
+<div *ngFor="let c of cBorradas; let i = index">{{c}}</div>

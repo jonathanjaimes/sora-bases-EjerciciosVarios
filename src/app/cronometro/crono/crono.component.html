@@ -1,0 +1,12 @@
+<h2>Cronómetro</h2>
+<p>{{numero}}</p>
+<button (click)="acumular()">+</button>
+<button (click)="acumular(false)">-</button>
+
+<p>Quieres saber si el número es diferente de cero? - toca el botón de abajo</p>
+<button (click)="validacion()">Averiguar</button>
+
+<ng-container *ngIf="band">
+    <p *ngIf="numero!=0; else otro">Si!, el número es diferente de cero</p>
+    <ng-template #otro><p>No!, el número es cero</p></ng-template>
+</ng-container>

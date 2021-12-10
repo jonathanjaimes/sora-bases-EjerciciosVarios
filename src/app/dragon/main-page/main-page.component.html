@@ -1,0 +1,33 @@
+<h2>Módulo de Dragón</h2>
+
+<div>
+    <div>
+        <h3>Lista de personajes</h3>
+        <ul>
+            <li>Dragón rosado - 200</li>
+            <li>Dragón invisible - 143</li>
+            <li>Dragón volador - 500</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Agregar</h3>
+
+        <form #listaDragones = "ngForm" (ngSubmit)="enviarDatos(listaDragones.value.nombreDragon, listaDragones.value.poderDragon); listaDragones.resetForm()">
+            <input type="text" placeholder="Nombre dragón" name="nombreDragon" ngModel>
+            <input type="text" placeholder="Poder dragón" name="poderDragon" ngModel>
+
+            <button type="submit" class="btn btn-success">Agregar dragón</button>
+            <button type="button" (click)="limpiarDragonesAgregados()" class="btn btn-danger">Limpiar</button>
+        </form>
+
+    </div>
+
+    <div *ngIf="dragonesAgregados.length!=0">
+        <h3>Dragones agregados</h3>
+        <ul>
+            <li *ngFor="let d of dragonesAgregados">{{d.nombre}} - {{d.poder | number}}</li>
+        </ul>
+    </div>
+
+</div>
+

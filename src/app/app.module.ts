@@ -2,13 +2,26 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import {CronometroModule} from "../app/cronometro/cronometro.module"
+import {HeroesModule} from "../app/heroes/heroes.module"
+import { DragonModule } from './dragon/dragon.module';
+import { ComunicacionModule } from './comunicacion/comunicacion.module';
+import { SuperheroesComponent } from './superheroes/superheroes.component';
+import { SuperComponent } from './super/super.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SuperheroesComponent,
+    SuperComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CronometroModule,
+    HeroesModule,
+    DragonModule,
+    ComunicacionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
