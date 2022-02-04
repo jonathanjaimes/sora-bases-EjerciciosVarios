@@ -19,3 +19,11 @@
 <div *ngFor="let elemento of datosHeroes">
     <app-super [elem]="elemento"></app-super>
 </div>
+
+<p>Practicando viewChild</p>
+<input #referencia type="text" value="Hola">
+<button (click)="imprimirValor()" >
+    oprimir
+</button>
+<input #referencia2 type="text" value="Hola2">
+<app-prueba-view-child></app-prueba-view-child>

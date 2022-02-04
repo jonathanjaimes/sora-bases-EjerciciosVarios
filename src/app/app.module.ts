@@ -8,13 +8,15 @@ import { DragonModule } from './dragon/dragon.module';
 import { ComunicacionModule } from './comunicacion/comunicacion.module';
 import { SuperheroesComponent } from './superheroes/superheroes.component';
 import { SuperComponent } from './super/super.component';
+import { PruebaViewChildComponent } from './prueba-view-child/prueba-view-child.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SuperheroesComponent,
-    SuperComponent
+    SuperComponent,
+    PruebaViewChildComponent
   ],
   imports: [
     BrowserModule,
